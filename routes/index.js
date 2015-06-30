@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('*', function(req, res, next) {
+  // get file at path X
+  // if in cache and mtime is > cache one, transpile and cache
+  // if not in cache, cache
+  // serve cached
+  res.send('');
 });
 
 module.exports = router;
